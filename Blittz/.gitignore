@@ -1,0 +1,12 @@
+.DS_Store
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.bak
+![Ll]ibrary/*.asset
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+*.unityproj
+*.apk

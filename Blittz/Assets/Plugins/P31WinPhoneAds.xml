@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P31WinPhoneAds</name>
+    </assembly>
+    <members>
+        <member name="T:Prime31.WinPhoneAds.WinPhoneAd">
+            <summary>
+            Note: the plugin post build system will attempt to do all of the following setup for you. If for some reason it fails,
+            below are the manual steps required.
+            
+            After building your Visual Studio project you will need to add a reference to the Microsoft Ads SDK. You can follow the guide
+            here (http://msdn.microsoft.com/en-us/library/advertising-mobile-windows-phone-8-adcontrol-walkthrough-api(v=msads.20).aspx) or
+            do the following:
+            
+            - right click and choose Add Reference
+                + select Windows Phone -> Extensions in the left pane
+                + check the box next to Microsoft Advertising SDK for Windows Phone 8 (XAML)
+            - open the WMAppManifest.xml file and in the Capabilities tab check: ID_CAP_IDENTITY_USER, ID_CAP_MEDIALIB_PHOTO, ID_CAP_PHONEDIALER
+            and ID_CAP_WEBBROWSERCOMPONENT
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAds.WinPhoneAd.createAdControl(Prime31.WinPhoneAds.WinPhoneAdConfig)">
+            <summary>
+            Creates an ad from the data provided in the adConfig object. Note that Microsoft recommends using an ad size
+            of 480 x 80 even if the ad you setup in pub Center is 320 x 50.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAds.WinPhoneAd.refresh">
+            <summary>
+            Refreshes the ad as long as there is only one present
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAds.WinPhoneAd.removeAd">
+            <summary>
+            Removes the ad as long as there is only one present
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAds.WinPhoneAd.adIsEngagedChangedEvent">
+            <summary>
+            Fired when an ad is engaged or disengaged
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAds.WinPhoneAd.adRefreshedEvent">
+            <summary>
+            Fired when an ad is refreshed
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAds.WinPhoneAd.adErrorOccurredEvent">
+            <summary>
+            Fired when an error occurs with an ad
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAds.WinPhoneAd.adLoadedEvent">
+            <summary>
+            Fired when an ad is loaded
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAds.WinPhoneAdHorizontalAlignment">
+            <summary>
+            Horizontal alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAds.WinPhoneAdVerticalAlignment">
+            <summary>
+            Vertical alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAds.WinPhoneAdConfig">
+            <summary>
+            Configuration class for Windows ads
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.applicationId">
+            <summary>
+            The applicationId for the ad from pub Center
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.adUnitId">
+            <summary>
+            The adUnitId for the ad from pub Center
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.horizontalAlignment">
+            <summary>
+            Horizonal alignment of the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.verticalAlignment">
+            <summary>
+            Vertical alignment of the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.width">
+            <summary>
+            Ad width. This MUST MATCH EXACTLY THE WIDTH OF THE ADUNITID!
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.height">
+            <summary>
+            Ad height. This MUST MATCH EXACTLY THE HEIGHT OF THE ADUNITID!
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.margins">
+            <summary>
+            Margins for the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAds.WinPhoneAdConfig.isAutoRefreshEnabled">
+            <summary>
+            Enables/disables autorefresh
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAds.WinPhoneAdConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+    </members>
+</doc>

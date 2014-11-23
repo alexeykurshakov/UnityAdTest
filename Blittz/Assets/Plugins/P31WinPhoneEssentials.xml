@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P31WinPhoneEssentials</name>
+    </assembly>
+    <members>
+        <member name="T:Prime31.WinPhoneEssentials.Color">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Color.colorFromARGB(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Creates a color form the argb values. Values should be between 0 and 255.
+            </summary>
+            <param name="a"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.Push">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneEssentials.Push.uriUsedToOpenApplication">
+            <summary>
+            This will contain the uri used to open the application. It is useful for knowing when a notification
+            was used to open the application or if a secondary live tile was used.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Push.openChannel(System.String)">
+            <summary>
+            Opens a push channel and binds it for toast and tile updates
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Push.closeChannel(System.String)">
+            <summary>
+            Closes a push channel
+            </summary>
+            <param name="channelName"></param>
+        </member>
+        <member name="E:Prime31.WinPhoneEssentials.Push.channelUriUpdatedEvent">
+            <summary>
+            Fired when the push channel Uri updates. Includes the new url;
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneEssentials.Push.connectionStatusChangedEvent">
+            <summary>
+            Fired when the channel connection status changes. Returns the status string (connected or disconnected)
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneEssentials.Push.shellToastNotificationReceivedEvent">
+            <summary>
+            Fired when a shell toast notification is received. Includes the Collection dictionary.
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneEssentials.Push.httpNotificationReceivedEvent">
+            <summary>
+            Fired when a raw HTTP notification is received
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneEssentials.Push.errorOccurredEvent">
+            <summary>
+            Fired when an error occurs
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.Sharing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showShareMediaUI(System.String)">
+            <summary>
+            Shows the media share task. filePath must be a valid path to an image file. Note that as of the current release
+            of Windows Phone this can only be an image from the camera due to application sandboxing.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showSMSComposer(System.String,System.String)">
+            <summary>
+            Shows the SMS composer
+            </summary>
+            <param name="toPhoneNumber"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.shareLink(System.String,System.String,System.String)">
+            <summary>
+            Shows the link share services selector for sharing links with supported apps
+            </summary>
+            <param name="link"></param>
+            <param name="title"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showEmailComposer(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Shows the email composer
+            </summary>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="to"></param>
+            <param name="bcc"></param>
+            <param name="cc"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showMarketplaceReviewPage">
+            <summary>
+            Shows the Marketplace review page
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showMarketplaceDetailPage(System.String)">
+            <summary>
+            Shows the Marketplace detail page for the application with the given contentIdentifier
+            </summary>
+            <param name="contentIdentifier"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showShareStatusUI(System.String)">
+            <summary>
+            Shows the status share services selector for sharing a status update with supported apps
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.showWebBrowser(System.String)">
+            <summary>
+            Shows the web browser
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Sharing.promptForPhoto(System.Boolean,System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Prompts the user to either take a photo or choose one from the gallery. completionHandler is fired with a bool
+            indicating success/failure and if the bool is true it will have a byte[] containing the image data. The image is
+            also written to IsolatedStorage with the filename promptForPhotoResult.jpg.
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.Tiles">
+            <summary>
+            templates: http://developer.nokia.com/Community/Wiki/Live_Tile_Templates_in_Windows_Phone_8
+            Any paths used for live tile images will be considered relative unless they contain a ":" or the path begins with
+            "/Shared/ShellContent" in which case it will automatically be loaded from isolated storage.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Tiles.updateApplicationTile(Prime31.WinPhoneEssentials.ShellTileData)">
+            <summary>
+            Updates the main application live tile
+            </summary>
+            <param name="tileData"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Tiles.totalActiveLiveTiles">
+            <summary>
+            Returns the total number of active live tiles. Note that the application tile and any secondary tiles are
+            included in the count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Tiles.createOrUpdateSecondaryLiveTile(System.String,Prime31.WinPhoneEssentials.ShellTileData)">
+            <summary>
+            Creates or updates a secondary live tile. Key is any unique string of your choosing to identify the tile.
+            </summary>
+            <param name="key"></param>
+            <param name="tileData"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.Tiles.deleteSecondaryLiveTile(System.String)">
+            <summary>
+            Deletes a secondary live tile by key. The key is the same one used to create the live tile.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.ShellTileData">
+            <summary>
+            Base class for Tile data
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneEssentials.ShellTileData.isWideCapable">
+            <summary>
+            Used internally to determine if a tile supports the wide format
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.ShellTileData.title">
+            <summary>
+            Gets or sets the text that displays on the front side of the medium and wide tile sizes.
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.StandardTileData">
+            <summary>
+            Data for a Tile pinned to Start. Tiles have a "front" and "back" to them, and this class holds all this data.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.StandardTileData.#ctor">
+            <summary>
+            Initializes a new instance of the StandardTileData class
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.StandardTileData.backBackgroundImage">
+            <summary>
+            Gets or sets a background image of the back of the Tile. If this property
+            is an empty string, the background image of the back of the Tile will not change
+            during an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.StandardTileData.backContent">
+            <summary>
+            Gets or sets the text to display on the back of the Tile, above the title.
+            If this property is an empty string, the content on the back of the Tile
+            will not change during an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.StandardTileData.backgroundImage">
+            <summary>
+            Gets or sets the background image of the front of the Tile. If this property
+            is an empty string, the background image of the front of the Tile will not change
+            during an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.StandardTileData.backTitle">
+            <summary>
+            Gets or sets the title to display at the bottom of the back of the Tile.
+            If this property is an empty string, the title on the back of the Tile will
+            not change during an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.StandardTileData.count">
+            <summary>
+            Gets or sets a value between 1 and 99 will be displayed in the Count field
+            of the Tile. A value of 0 means the Count will not be displayed. If this
+            property is not set, the Count display will not change during an update.
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.IconicTileData">
+            <summary>
+            Describes an iconic Tile template
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.IconicTileData.#ctor">
+            <summary>
+            Initializes a new instance of the IconicTileData class.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.backgroundColor">
+            <summary>
+            Gets or sets the background color of the Tile. Setting this property overrides
+            the default theme color that is set on the phone.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.count">
+            <summary>
+            Gets or sets a value between 1 and 99 that will be displayed in the Count
+            field of the Tile. A value of 0 means the Count will not be displayed. If
+            this property is not set, the Count display will not change dstringng an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.iconImage">
+            <summary>
+            Gets or sets the icon image for the medium and large Tile sizes
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.smallIconImage">
+            <summary>
+            Gets or sets the icon image for the small Tile size
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.wideContent1">
+            <summary>
+            Gets or sets the text that displays on the first row of the wide Tile size
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.wideContent2">
+            <summary>
+            Gets or sets the text that displays on the second row of the wide Tile size
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.IconicTileData.wideContent3">
+            <summary>
+            Gets or sets the text that displays on the third row of the wide Tile size
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.FlipTileData">
+            <summary>
+            Describes a Tile template that flips from the front to the back side. Allows
+            customization of the background image and text for both the front and back Tile.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.FlipTileData.#ctor">
+            <summary>
+            Initializes a new instance of the FlipTileData class
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.FlipTileData.smallBackgroundImage">
+            <summary>
+            Gets and sets the front-side background image for the small Tile size
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.FlipTileData.wideBackBackgroundImage">
+            <summary>
+            Gets and sets the back-side background image for the wide Tile size.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.FlipTileData.wideBackContent">
+            <summary>
+            Gets and sets the text that displays above the title, on the back-side of the wide Tile size.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.FlipTileData.wideBackgroundImage">
+            <summary>
+            Gets and sets the front-side background image for the wide Tile size.
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneEssentials.CycleTileData">
+            <summary>
+            Describes a Tile template that cycles between 1 to 9 background images
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneEssentials.CycleTileData.#ctor">
+            <summary>
+            Initializes a new instance of the CycleTileData class.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.CycleTileData.count">
+            <summary>
+            Gets or sets a value between 1 and 99 that will be displayed in the Count
+            field of the Tile. A value of 0 means the Count will not be displayed. If
+            this property is not set, the Count display will not change during an update.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.CycleTileData.cycleImages">
+            <summary>
+            Gets or sets a collection of up to 9 background images for the medium and wide Tile sizes.
+            </summary>
+        </member>
+        <member name="P:Prime31.WinPhoneEssentials.CycleTileData.smallBackgroundImage">
+            <summary>
+            Gets and sets the front-side background image for the small Tile size.
+            </summary>
+        </member>
+    </members>
+</doc>

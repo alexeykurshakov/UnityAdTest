@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P31WinPhoneAdMob</name>
+    </assembly>
+    <members>
+        <member name="T:Prime31.WinPhoneAdMob.AdHorizontalAlignment">
+            <summary>
+            Horizontal alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdMob.AdVerticalAlignment">
+            <summary>
+            Vertical alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdMob.AdFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdMob.WinPhoneAdMob">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdMob.WinPhoneAdMob.createBanner(System.String,Prime31.WinPhoneAdMob.AdFormat,Prime31.WinPhoneAdMob.AdHorizontalAlignment,Prime31.WinPhoneAdMob.AdVerticalAlignment,System.Boolean)">
+            <summary>
+            Creates an ad banner. Note that testMode doesn't yet work in the AdMob SDK.
+            </summary>
+            <param name="adUnitId"></param>
+            <param name="adFormat"></param>
+            <param name="horizontalAlignment"></param>
+            <param name="verticalAlignment"></param>
+            <param name="enableTestMode"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneAdMob.WinPhoneAdMob.removeBanner">
+            <summary>
+            Removes the ad banner from the view
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdMob.WinPhoneAdMob.loadInterstitial(System.String,System.Boolean)">
+            <summary>
+            Sends out a request to load an interstitial. Note that testMode doesn't yet work in the AdMob SDK.
+            </summary>
+            <param name="adUnitId"></param>
+            <param name="enableTestMode"></param>
+        </member>
+        <member name="M:Prime31.WinPhoneAdMob.WinPhoneAdMob.showInterstitial">
+            <summary>
+            Shows an interstitial as long as one is loaded
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.receivedAdEvent">
+            <summary>
+            Fired when a banner successfully loaded an ad
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.failedToReceiveAdEvent">
+            <summary>
+            Fired when a banner has failed to load (typically because of network failure, an application configuration error, or a lack of ad inventory)
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.dismissingOverlayEvent">
+            <summary>
+            Fired after an interstitial/overlay is dismissed
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.showingOverlayEvent">
+            <summary>
+            Fired before an interstitial/overlay is shown
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.interstitialReceivedAdEvent">
+            <summary>
+            Fired when an interstitial successfully loaded an ad
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdMob.WinPhoneAdMob.interstitialFailedToReceiveAdEvent">
+            <summary>
+            Fired when an interstitial has failed to load (typically because of network failure, an application configuration error, or a lack of ad inventory)
+            </summary>
+        </member>
+    </members>
+</doc>

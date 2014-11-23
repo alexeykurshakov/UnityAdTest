@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P31WinPhoneAdsProxy</name>
+    </assembly>
+    <members>
+        <member name="T:Prime31.WinPhoneAdProxy.WinPhoneAd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdProxy.WinPhoneAd.createAdControl(Prime31.WinPhoneAdProxy.WinPhoneAdConfig)">
+            <summary>
+            Creates an ad from the data provided in the adConfig object. Note that Microsoft recommends using an ad size
+            of 480 x 80 even if the ad you setup in pub Center is 320 x 50.
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdProxy.WinPhoneAd.refresh">
+            <summary>
+            Refreshes the ad as long as there is only one present
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdProxy.WinPhoneAd.removeAd">
+            <summary>
+            Removes the ad as long as there is only one present
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdProxy.WinPhoneAd.adIsEngagedChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdProxy.WinPhoneAd.adRefreshedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdProxy.WinPhoneAd.adErrorOccurredEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Prime31.WinPhoneAdProxy.WinPhoneAd.adLoadedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdProxy.WinPhoneAdHorizontalAlignment">
+            <summary>
+            Horizontal alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdProxy.WinPhoneAdVerticalAlignment">
+            <summary>
+            Vertical alignment of an ad
+            </summary>
+        </member>
+        <member name="T:Prime31.WinPhoneAdProxy.WinPhoneAdConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.applicationId">
+            <summary>
+            The applicationId for the ad from pub Center
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.adUnitId">
+            <summary>
+            The adUnitId for the ad from pub Center
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.horizontalAlignment">
+            <summary>
+            Horizonal alignment of the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.verticalAlignment">
+            <summary>
+            Vertical alignment of the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.width">
+            <summary>
+            Ad width. This MUST MATCH EXACTLY THE WIDTH OF THE ADUNITID!
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.height">
+            <summary>
+            Ad height. This MUST MATCH EXACTLY THE HEIGHT OF THE ADUNITID!
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.margins">
+            <summary>
+            Margins for the ad
+            </summary>
+        </member>
+        <member name="F:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.isAutoRefreshEnabled">
+            <summary>
+            Enables/disables autorefresh
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Prime31.WinPhoneAdProxy.WinPhoneAdConfig.setAlignmentsWithInts(System.Int32,System.Int32)">
+            <summary>
+            Internal
+            </summary>
+            <param name="horizontal"></param>
+            <param name="vertical"></param>
+        </member>
+    </members>
+</doc>
